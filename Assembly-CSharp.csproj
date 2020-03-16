@@ -53,6 +53,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Script\inimigo.cs" />
      <Compile Include="Assets\Script\movimento.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>E:/DESENVOLVIMENTO TCC2/Progster Versao 1/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>

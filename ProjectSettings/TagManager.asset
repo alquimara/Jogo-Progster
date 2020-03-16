@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - semente
+  - cobra
+  - personagem
   layers:
   - Default
   - TransparentFX
