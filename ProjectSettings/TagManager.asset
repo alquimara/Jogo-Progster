@@ -7,6 +7,7 @@ TagManager:
   - semente
   - cobra
   - personagem
+  - andar
   layers:
   - Default
   - TransparentFX
