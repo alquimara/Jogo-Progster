@@ -8,6 +8,7 @@ TagManager:
   - cobra
   - personagem
   - andar
+  - DragParent
   layers:
   - Default
   - TransparentFX
