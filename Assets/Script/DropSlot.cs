@@ -5,17 +5,22 @@ using UnityEngine.EventSystems;
 
 
 public class DropSlot : MonoBehaviour, IDropHandler
+
 {
+    
        public GameObject peca;
        public void OnDrop(PointerEventData eventData)
     {
-        Debug.Log("Drop");
+        Debug.Log("eSTOU NO DROP");
 
         if (!peca)
         {
-            peca = DragHandLer.pecaDragging;
+            peca = DragHandler.pieceDragging;
             peca.transform.SetParent(transform);
             peca.transform.position = transform.position;
+            movimento.acoes.Add("andar");
+            Debug.Log(movimento.acoes[0]);
+            
         }
     }
     
@@ -28,7 +33,7 @@ public class DropSlot : MonoBehaviour, IDropHandler
     {
         if (peca != null && peca.transform.parent != transform)
         {
-            Debug.Log("Remover");
+            Debug.Log("FORA");
             peca = null;
         }
     }

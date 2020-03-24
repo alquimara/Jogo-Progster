@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class DragHandLer : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler
+public class DragHandler : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler
 {
-    public static GameObject pecaDragging;
+    public static GameObject pieceDragging;
     Vector3 startPosition;
 	Transform startParent;
     Transform DragParent;
@@ -16,8 +16,8 @@ public class DragHandLer : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndD
     }
     public void OnBeginDrag(PointerEventData eventData)
     {
-        Debug.Log("OnBeginDrag");
-        pecaDragging = gameObject;
+       
+        pieceDragging = gameObject;
         startPosition = transform.position;
         startParent = transform.parent;
         transform.SetParent(DragParent);
@@ -26,14 +26,14 @@ public class DragHandLer : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndD
 
     public void OnDrag(PointerEventData eventData)
     {
-         Debug.Log("OnDrag");
+        
         transform.position = Input.mousePosition;
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        Debug.Log("OnEndDrag");
-        pecaDragging = null;
+       
+        pieceDragging = null;
         if(transform.parent == DragParent){
             transform.position = startPosition;
             transform.SetParent(startParent);

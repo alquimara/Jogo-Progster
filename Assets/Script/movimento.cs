@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class movimento : MonoBehaviour
+public  class movimento : MonoBehaviour
 {
+	public static movimento Instance;
     // Start is called before the first frame update
     public float velocidade;
 	public float posicao;
@@ -12,10 +13,14 @@ public class movimento : MonoBehaviour
 	public float velocidadeY;
 	public GameObject other;
 	public Vector2 posicaoinicial;
-	private Vector2 andar;
- 	private List<string> acoes = new List<string>();
+	public Vector2 andar;
+ 	public static List<string> acoes = new List<string>();
+	 void Awake(){
+    Instance = this;
+  }
 
 	// Use this for initialization
+
 	void Start () {
 		personagem = GetComponent<Rigidbody2D> ();
 		andar = Vector2.right* 1.45F;
@@ -39,6 +44,7 @@ public class movimento : MonoBehaviour
 	}
 
 	public IEnumerator Executar(){
+		yield return new WaitForSeconds(0.5F);
 		foreach(string a in acoes){
 			if(a == "andar"){
 				Andar();
