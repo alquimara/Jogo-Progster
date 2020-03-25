@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Text.RegularExpressions;
- using System.Text.RegularExpressions;
+using System.Text.RegularExpressions;
 
 public class contador : MonoBehaviour
 {
     public static contador Instance;
-    public Text input;
+    
+    public InputField inputField;
 
     public string R1input;
     public int contadorR1;
@@ -20,29 +21,25 @@ public class contador : MonoBehaviour
     // Update is called once per frame
    void Awake(){
     Instance = this;
+    inputField = GameObject.Find("contador").GetComponent<InputField>();
   }
     void Update()
     {
-        R1input = input.text;
+        R1input = inputField.text;
         if(R1input != ""){
             contadorR1 = int.Parse(R1input);
             if(contadorR1 < 2 || contadorR1 > 5){
-                input.text = null;
-                
-                Debug.Log("estou no if ");
-
+                inputField.text = "";
+                contadorR1 = 0;
                
             }
-            else{
-                Debug.Log("estou no else");
-            }
-            
         }
     
     }
 
     void Start(){
-        input.text = "2";
+        inputField.text = "2";
+        
     }
 
     

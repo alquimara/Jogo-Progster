@@ -15,6 +15,7 @@ public  class movimento : MonoBehaviour
 	public Vector2 posicaoinicial;
 	public Vector2 andar;
  	public static List<string> acoes = new List<string>();
+	 
 	public static List<string> R1 = new List<string>();
 	 
 	 void Awake(){
