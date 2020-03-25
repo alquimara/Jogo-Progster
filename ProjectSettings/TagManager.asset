@@ -9,6 +9,7 @@ TagManager:
   - personagem
   - andar
   - DragParent
+  - R1
   layers:
   - Default
   - TransparentFX
