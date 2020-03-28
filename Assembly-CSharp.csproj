@@ -59,6 +59,8 @@
      <Compile Include="Assets\Script\andar\movimento.cs" />
      <Compile Include="Assets\Script\andar\piecePool.cs" />
      <Compile Include="Assets\Script\andar\start.cs" />
+     <Compile Include="Assets\Script\andar\testeForca.cs" />
+     <Compile Include="Assets\Script\colisao.cs" />
      <Compile Include="Assets\Script\contador.cs" />
      <Compile Include="Assets\Script\DropR1.cs" />
      <Compile Include="Assets\Script\inimigo.cs" />

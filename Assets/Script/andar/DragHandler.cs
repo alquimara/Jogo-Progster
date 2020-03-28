@@ -6,9 +6,9 @@ using UnityEngine.EventSystems;
 public class DragHandler : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler{
 
     public static GameObject pieceDragging;
-    Vector3 startPosition;
-	Transform startParent;
-    Transform DragParent;
+     public static Vector3 startPosition;
+	 public static Transform startParent;
+     public static Transform DragParent;
     public static DragHandler Instance;
   
     private void Start(){
@@ -37,5 +37,7 @@ public class DragHandler : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndD
             transform.position = startPosition;
             transform.SetParent(startParent);
         }
+       
+       
     }
 }

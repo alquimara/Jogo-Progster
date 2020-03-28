@@ -11,6 +11,7 @@ TagManager:
   - DragParent
   - R1
   - 1
+  - "ch\xE3o"
   layers:
   - Default
   - TransparentFX
