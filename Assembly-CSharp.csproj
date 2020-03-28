@@ -55,6 +55,7 @@
   <ItemGroup>
      <Compile Include="Assets\Script\andar\DragHandler.cs" />
      <Compile Include="Assets\Script\andar\DropSlot.cs" />
+     <Compile Include="Assets\Script\andar\execucao.cs" />
      <Compile Include="Assets\Script\andar\movimento.cs" />
      <Compile Include="Assets\Script\andar\piecePool.cs" />
      <Compile Include="Assets\Script\andar\start.cs" />

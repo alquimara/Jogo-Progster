@@ -11,7 +11,7 @@ public class start : MonoBehaviour
   }
 
     void OnMouseDown(){
-      StartCoroutine(movimento.Instance.Executar());
+      StartCoroutine(execucao.Instance.Executar2());
     
     }
     // Start is called before the first frame update

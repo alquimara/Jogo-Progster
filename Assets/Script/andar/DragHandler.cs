@@ -9,11 +9,16 @@ public class DragHandler : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndD
     Vector3 startPosition;
 	Transform startParent;
     Transform DragParent;
+    public static DragHandler Instance;
   
   private void Start() 
     {
         DragParent = GameObject.FindGameObjectWithTag("DragParent").transform;
     }
+     void Awake(){
+    Instance = this;
+  }
+
     public void OnBeginDrag(PointerEventData eventData)
     {
        
@@ -21,18 +26,19 @@ public class DragHandler : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndD
         startPosition = transform.position;
         startParent = transform.parent;
         transform.SetParent(DragParent);
-        Debug.Log(pieceDragging);
-
     }
 
     public void OnDrag(PointerEventData eventData)
     {
         
         transform.position = Input.mousePosition;
+        //Debug.Log(DropSlot.tamanho);
+       
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
+       
        
         pieceDragging = null;
         if(transform.parent == DragParent){
@@ -40,6 +46,7 @@ public class DragHandler : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndD
             transform.SetParent(startParent);
 
         }
+         
 
     }
     

@@ -24,7 +24,7 @@ public class DropR1 : MonoBehaviour,  IDropHandler
             peca.transform.SetParent(transform);
             peca.transform.position = transform.position;
             if(peca.tag == "andar"){
-                movimento.R1.Add("andar");   
+                execucao.R12.Add("andar");  
         }
     }
     
