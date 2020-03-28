@@ -23,6 +23,7 @@ public class execucao : MonoBehaviour{
             if(ob.transform.childCount != 0){
                 if(ob.transform.GetChild(0).tag == "andar"){
                     movimento.Instance.Andar();
+                    yield return new WaitForSeconds(0.5F);
                 }
                 else if(ob.transform.GetChild(0).tag == "R1"){
                     if(R1Slot.transform.childCount != 0){
@@ -35,7 +36,7 @@ public class execucao : MonoBehaviour{
                     }
                 }
             }
-            yield return new WaitForSeconds(0.5F);
         }
+        start.play = 0;
 	}
 }

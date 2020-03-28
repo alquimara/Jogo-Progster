@@ -11,7 +11,7 @@ public  class movimento : MonoBehaviour{
 	private Rigidbody2D personagem;
 	public float velocidadeY;
 	public GameObject other;
-	public Vector2 posicaoinicial;
+	public  static Vector3 posicaoinicial;
 	public Vector2 andar;
 	
 	void Awake(){
@@ -21,6 +21,7 @@ public  class movimento : MonoBehaviour{
 	void Start () {
 		personagem = GetComponent<Rigidbody2D> ();
 		andar = Vector2.right* 1.45F;
+		posicaoinicial = personagem.transform.position;
 	}
 
 	/*void Update () {
