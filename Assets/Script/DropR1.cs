@@ -4,26 +4,27 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-
-public class DropR1 : MonoBehaviour,  IDropHandler
-{
+public class DropR1 : MonoBehaviour,  IDropHandler{
     public static DropR1 Instance;
     public GameObject peca;
     public  int R1count;
+    
     void Awake(){
-    Instance = this;
-  }
-       public void OnDrop(PointerEventData eventData)
-    {
-        if (!peca)
-        {
-            Debug.Log(contador.Instance.contadorR1);
+        Instance = this;
+    }
+       public void OnDrop(PointerEventData eventData){
+        if (!peca){
+            //Debug.Log(contador.Instance.contadorR1);
             peca = DragHandler.pieceDragging;
             peca.transform.SetParent(transform);
             peca.transform.position = transform.position;
-            if(peca.tag == "andar"){
-                execucao.R1.Add(peca);  
+           
+        } 
+    }
+
+     void Update(){
+        if (peca != null && peca.transform.parent != transform){
+            peca = null;
         }
-    } 
-}
+    }
 }

@@ -3,58 +3,39 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class DragHandler : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler
-{
+public class DragHandler : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler{
+
     public static GameObject pieceDragging;
     Vector3 startPosition;
 	Transform startParent;
     Transform DragParent;
     public static DragHandler Instance;
   
-  private void Start() 
-    {
+    private void Start(){
         DragParent = GameObject.FindGameObjectWithTag("DragParent").transform;
     }
-     void Awake(){
-    Instance = this;
-  }
+    
+    void Awake(){
+        Instance = this;
+    }
 
-    public void OnBeginDrag(PointerEventData eventData)
-    {
-       
+    public void OnBeginDrag(PointerEventData eventData){
         pieceDragging = gameObject;
         startPosition = transform.position;
         startParent = transform.parent;
         transform.SetParent(DragParent);
     }
 
-    public void OnDrag(PointerEventData eventData)
-    {
-        
+    public void OnDrag(PointerEventData eventData){
         transform.position = Input.mousePosition;
-        //Debug.Log(DropSlot.tamanho);
-       
+        //Debug.Log(DropSlot.tamanho);       
     }
 
-    public void OnEndDrag(PointerEventData eventData)
-    {
-       
-       
+    public void OnEndDrag(PointerEventData eventData){
         pieceDragging = null;
         if(transform.parent == DragParent){
             transform.position = startPosition;
             transform.SetParent(startParent);
-
         }
-         
-
-    }
-    
-
-
-
-    private void Update()
-    {
-
     }
 }
