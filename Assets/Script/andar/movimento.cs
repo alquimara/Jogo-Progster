@@ -14,14 +14,10 @@ public  class movimento : MonoBehaviour
 	public GameObject other;
 	public Vector2 posicaoinicial;
 	public Vector2 andar;
- 	public static List<string> acoes = new List<string>();
 	
-	 
-	public static List<string> R1 = new List<string>();
-	 
 	 void Awake(){
-    Instance = this;
-  }
+    	Instance = this;
+	}
 
 	// Use this for initialization
 
@@ -32,13 +28,6 @@ public  class movimento : MonoBehaviour
 	
 	// Update is called once per frame
 	void Update () {
-		/*if (Input.GetKeyDown (KeyCode.R)) {
-			R1.Add("andar");
-		}
-
-		if (Input.GetKeyDown (KeyCode.T)) {
-			acoes.Add("R1");
-		}
 		/*if (Input.GetKeyDown (KeyCode.Space)) {
 			personagem.AddForce (transform.up * 5 );
 		}*/
@@ -46,26 +35,6 @@ public  class movimento : MonoBehaviour
 
 	public void Andar(){
 		transform.Translate(andar);
-	}
-
-	public IEnumerator Executar(){
-		yield return new WaitForSeconds(0.5F);
-		foreach(string a in acoes){
-			if(a == "andar"){
-				Andar();
-			}
-			else if(a == "R1"){
-				for(int i=0;i<contador.Instance.contadorR1;i++){
-					foreach(string r in R1){
-						if(r == "andar"){
-							Andar();
-						}
-						yield return new WaitForSeconds(0.5F);
-					}
-				}
-			}
-			yield return new WaitForSeconds(0.5F);
-		}
 	}
 
 void OnTriggerEnter2D (Collider2D Obj){

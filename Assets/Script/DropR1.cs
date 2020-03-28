@@ -15,8 +15,6 @@ public class DropR1 : MonoBehaviour,  IDropHandler
   }
        public void OnDrop(PointerEventData eventData)
     {
-
-
         if (!peca)
         {
             Debug.Log(contador.Instance.contadorR1);
@@ -24,24 +22,8 @@ public class DropR1 : MonoBehaviour,  IDropHandler
             peca.transform.SetParent(transform);
             peca.transform.position = transform.position;
             if(peca.tag == "andar"){
-                execucao.R12.Add("andar");  
+                execucao.R1.Add(peca);  
         }
-    }
-    
-    void Start()
-    {
-       
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-    
-         if (peca != null && peca.transform.parent != transform)
-        {
-            peca = null;
-        }
-        
-    }
+    } 
 }
 }

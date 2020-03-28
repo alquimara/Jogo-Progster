@@ -9,25 +9,13 @@ public class execucao : MonoBehaviour
      public Transform[] obj;
      public static GameObject peca;
      public static execucao Instance;
-     public static List<string> R12 = new List<string>();
+     public static List<GameObject> R1 = new List<GameObject>();
        void Awake()
      {
         Instance = this;
         obj = GetComponentsInChildren<Transform>(true);
      }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-       
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    
     public IEnumerator Executar2(){
 		yield return new WaitForSeconds(0.5F);
 		foreach(var ob in obj.Where(ob => (ob != transform))){
@@ -37,8 +25,8 @@ public class execucao : MonoBehaviour
                  }
                  else if(ob.transform.GetChild(0).tag == "R1"){
                     for(int i=0;i<contador.Instance.contadorR1;i++){
-                        foreach(string r in R12){
-                            if(r == "andar"){
+                        foreach(GameObject r in R1){
+                            if(r.tag == "andar"){
                                 movimento.Instance.Andar();
                             }
                             yield return new WaitForSeconds(0.5F);
@@ -49,25 +37,4 @@ public class execucao : MonoBehaviour
 			yield return new WaitForSeconds(0.5F);
 		}
 	}
-
-   /* public int getChildren(GameObject obj)
-{
-    int count = 0;
-
-    for (int i = 0; i < obj.transform.childCount; i++)
-    {
-        count++;
-        counter(obj.transform.GetChild(i).gameObject, ref count);
-    }
-    return count;
-}
-
-private void counter(GameObject currentObj, ref int count)
-{
-    for (int i = 0; i < currentObj.transform.childCount; i++)
-    {
-        count++;
-        counter(currentObj.transform.GetChild(i).gameObject, ref count);
-    }
-}*/
 }
