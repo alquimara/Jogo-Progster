@@ -39,7 +39,6 @@ public  class movimento : MonoBehaviour{
 
 	public void Andar(){
 		transform.Translate(andar);
-		//personagem.AddForce(Vector2.right * 3.5f, ForceMode2D.Impulse);
 		Debug.Log(transform.position.x);
 	}
 	public void Pular(){
