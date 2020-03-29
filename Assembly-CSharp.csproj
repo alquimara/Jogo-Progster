@@ -61,8 +61,12 @@
      <Compile Include="Assets\Script\andar\start.cs" />
      <Compile Include="Assets\Script\andar\testeForca.cs" />
      <Compile Include="Assets\Script\colisao.cs" />
-     <Compile Include="Assets\Script\contador.cs" />
+     <Compile Include="Assets\Script\contadorR1.cs" />
+     <Compile Include="Assets\Script\contadorR2.cs" />
+     <Compile Include="Assets\Script\contadorR3.cs" />
      <Compile Include="Assets\Script\DropR1.cs" />
+     <Compile Include="Assets\Script\F1execucao.cs" />
+     <Compile Include="Assets\Script\F2execucao.cs" />
      <Compile Include="Assets\Script\inimigo.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>E:/DESENVOLVIMENTO TCC2/Progster Versao 1/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>

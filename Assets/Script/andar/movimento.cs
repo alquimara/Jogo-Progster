@@ -15,7 +15,6 @@ public  class movimento : MonoBehaviour{
 	public GameObject other;
 	public  static Vector3 posicaoinicial;
 	public Vector2 andar;
-	
 
 	void Awake(){
     	Instance = this;
@@ -29,14 +28,10 @@ public  class movimento : MonoBehaviour{
 	}
 
 	void Update () {
-		if (Input.GetKeyDown (KeyCode.Space) && grounded) {
-			Pular();
+		if (Input.GetKeyDown (KeyCode.Space)) {
+			
 		}
 	}
-	void FixedUpdate(){
-		
-	}
-
 	public void Andar(){
 		transform.Translate(andar);
 		Debug.Log(transform.position.x);
@@ -68,5 +63,6 @@ public  class movimento : MonoBehaviour{
 			Destroy(other);	
 			SceneManager.LoadScene("game over");
 		}
+		
 	}	
 }

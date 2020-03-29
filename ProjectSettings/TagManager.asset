@@ -13,6 +13,10 @@ TagManager:
   - 1
   - "ch\xE3o"
   - pular
+  - R2
+  - R3
+  - F1
+  - F2
   layers:
   - Default
   - TransparentFX
