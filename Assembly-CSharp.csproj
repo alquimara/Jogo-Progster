@@ -53,21 +53,23 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Script\andar\DragHandler.cs" />
-     <Compile Include="Assets\Script\andar\DropSlot.cs" />
-     <Compile Include="Assets\Script\andar\execucao.cs" />
-     <Compile Include="Assets\Script\andar\movimento.cs" />
-     <Compile Include="Assets\Script\andar\piecePool.cs" />
-     <Compile Include="Assets\Script\andar\start.cs" />
-     <Compile Include="Assets\Script\andar\testeForca.cs" />
-     <Compile Include="Assets\Script\colisao.cs" />
-     <Compile Include="Assets\Script\contadorR1.cs" />
-     <Compile Include="Assets\Script\contadorR2.cs" />
-     <Compile Include="Assets\Script\contadorR3.cs" />
-     <Compile Include="Assets\Script\DropR1.cs" />
-     <Compile Include="Assets\Script\F1execucao.cs" />
-     <Compile Include="Assets\Script\F2execucao.cs" />
-     <Compile Include="Assets\Script\inimigo.cs" />
+     <Compile Include="Assets\Script\colisao\colisao.cs" />
+     <Compile Include="Assets\Script\contador\contadorR1.cs" />
+     <Compile Include="Assets\Script\contador\contadorR2.cs" />
+     <Compile Include="Assets\Script\contador\contadorR3.cs" />
+     <Compile Include="Assets\Script\encaixe\DragHandler.cs" />
+     <Compile Include="Assets\Script\encaixe\DropR1.cs" />
+     <Compile Include="Assets\Script\encaixe\DropSlot.cs" />
+     <Compile Include="Assets\Script\encaixe\piecePool.cs" />
+     <Compile Include="Assets\Script\execucao\execucao.cs" />
+     <Compile Include="Assets\Script\execucao\F1execucao.cs" />
+     <Compile Include="Assets\Script\execucao\F2execucao.cs" />
+     <Compile Include="Assets\Script\execucao\R1execucao.cs" />
+     <Compile Include="Assets\Script\execucao\R2execucao.cs" />
+     <Compile Include="Assets\Script\execucao\R3execucao.cs" />
+     <Compile Include="Assets\Script\inimigos\inimigo.cs" />
+     <Compile Include="Assets\Script\Movimento\movimento.cs" />
+     <Compile Include="Assets\Script\play\start.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>E:/DESENVOLVIMENTO TCC2/Progster Versao 1/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
