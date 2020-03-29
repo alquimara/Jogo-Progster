@@ -11,7 +11,7 @@ public  class movimento : MonoBehaviour{
 	private Rigidbody2D personagem;
 	public float jumpPower;
 	private bool jump;
-	public bool grounded;
+	public static bool grounded;
 	public GameObject other;
 	public  static Vector3 posicaoinicial;
 	public Vector2 andar;
@@ -30,24 +30,23 @@ public  class movimento : MonoBehaviour{
 
 	void Update () {
 		if (Input.GetKeyDown (KeyCode.Space) && grounded) {
-			jump = true;
-		}
-		if(grounded){
-		
+			Pular();
 		}
 	}
 	void FixedUpdate(){
-		if(jump){
-			personagem.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
-			personagem.AddForce(andar * 2, ForceMode2D.Impulse);
-			Debug.Log(transform.position);
-			jump = false;
-		}
+		
 	}
 
 	public void Andar(){
 		transform.Translate(andar);
+		//personagem.AddForce(Vector2.right * 3.5f, ForceMode2D.Impulse);
 		Debug.Log(transform.position.x);
+	}
+	public void Pular(){
+		personagem.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
+		personagem.AddForce(andar * 2, ForceMode2D.Impulse);
+		Debug.Log(transform.position);
+
 	}
 	
     void OnCollisionStay2D(Collision2D col){
