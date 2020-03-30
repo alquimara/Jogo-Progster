@@ -12,7 +12,10 @@ public  class movimento : MonoBehaviour{
 	public GameObject other;
 	public  static Vector3 posicaoinicial;
 	public Vector2 andar;
-	public BoxCollider2D  plataforma;
+	public static bool subir;
+	public static bool descer;
+	public BoxCollider2D plataforma1;
+	public BoxCollider2D plataforma2;
 	[HideInInspector]
 	public bool escada = false;
 	public float velocidaEscada;
@@ -29,8 +32,6 @@ public  class movimento : MonoBehaviour{
 		personagem = GetComponent<Rigidbody2D> ();
 		andar = Vector2.right* 1.45F;
 		posicaoinicial = personagem.transform.position;
-		Debug.Log(plataforma.name);
-
 	}
 
 	void Update () {
@@ -47,13 +48,13 @@ public  class movimento : MonoBehaviour{
 		personagem.AddForce(andar * 2, ForceMode2D.Impulse);
 
 	}
-	
+
     void OnCollisionStay2D(Collision2D col){
 		if(col.gameObject.tag == "chão"){
 			grounded = true;
 		}
 		if(col.gameObject.tag == "plataforma"){
-			esc = true;
+			
 		}
 		
 	}
@@ -62,33 +63,31 @@ public  class movimento : MonoBehaviour{
 			grounded = false;
 		}
 	}
-
 	void OnTriggerStay2D(Collider2D esc){
 		if(esc.gameObject.tag == "escada"){
-			if(Input.GetKeyDown(KeyCode.S)){
-				personagem.velocity = new Vector2(personagem.velocity.x, velocidaEscada);
-				personagem.gravityScale = 0;
-				escada =true;
-				plataforma.enabled=true;
-				Debug.Log("subi");
-			}
+			subir = true;
 		}
 
 	}
-	void Subir(){
+	public void Subir(){
+		personagem.velocity = new Vector2(personagem.velocity.x, velocidaEscada);
+		personagem.gravityScale = 0;
+		escada =true;
+		plataforma1.enabled = true;
 		
 	}
-	void OnTriggerExit2D(Collider2D ext){
-		Debug.Log("nao toquei na escada");
-		if(ext.gameObject.tag == "escada" && escada){
-			personagem.gravityScale = 1;
-			escada = false;
-			plataforma.enabled = true;
-			if(Input.GetKeyDown(KeyCode.A)){
-				Debug.Log("desci");
-				personagem.velocity = new Vector2(personagem.velocity.x,0);
+	public void Descer(){
+		personagem.gravityScale = 1;
+		escada = false;
+		plataforma2.enabled = false;
+		personagem.velocity = new Vector2(personagem.velocity.x,0);
 
-			}
+
+	}
+	void OnTriggerExit2D(Collider2D ext){
+		if(ext.gameObject.tag == "escada" && escada){
+			descer = true;
+			personagem.gravityScale = 1;
 		}
 	}
 	void OnTriggerEnter2D (Collider2D Obj){

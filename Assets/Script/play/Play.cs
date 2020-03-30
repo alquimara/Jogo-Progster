@@ -18,7 +18,6 @@ public class Play : MonoBehaviour{
     }
     void start(){
     renderSprite = GetComponent<SpriteRenderer>();
-    Debug.Log(renderSprite.name);
     }
 
     IEnumerator OnMouseDown(){

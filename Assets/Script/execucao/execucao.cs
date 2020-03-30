@@ -28,6 +28,14 @@ public class execucao : MonoBehaviour{
                     movimento.Instance.Pular();
                     yield return new WaitForSeconds(1.5F);
                 }
+                if(ob.transform.GetChild(0).tag == "subir" && movimento.subir){
+                    movimento.Instance.Subir();
+                    yield return new WaitForSeconds(2F);
+                }
+                 if(ob.transform.GetChild(0).tag == "descer" && movimento.descer){
+                    movimento.Instance.Descer();
+                    yield return new WaitForSeconds(2F);
+                }
                 else if(ob.transform.GetChild(0).tag == "R1"){
                     yield return StartCoroutine(R1execucao.Instance.R1exe());
                 }
