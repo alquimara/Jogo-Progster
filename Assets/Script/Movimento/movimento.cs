@@ -36,7 +36,6 @@ public  class movimento : MonoBehaviour{
 	public void Pular(){
 		personagem.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
 		personagem.AddForce(andar * 2, ForceMode2D.Impulse);
-		Debug.Log(transform.position);
 
 	}
 	

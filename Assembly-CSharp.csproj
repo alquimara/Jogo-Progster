@@ -69,7 +69,7 @@
      <Compile Include="Assets\Script\execucao\R3execucao.cs" />
      <Compile Include="Assets\Script\inimigos\inimigo.cs" />
      <Compile Include="Assets\Script\Movimento\movimento.cs" />
-     <Compile Include="Assets\Script\play\start.cs" />
+     <Compile Include="Assets\Script\play\Play.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>E:/DESENVOLVIMENTO TCC2/Progster Versao 1/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>

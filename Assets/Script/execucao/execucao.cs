@@ -19,7 +19,6 @@ public class execucao : MonoBehaviour{
 
     public IEnumerator Executar2(){
         foreach(var ob in obj.Where(ob => (ob != transform))){
-            yield return new WaitForSeconds(0.5F);
             if(ob.transform.childCount != 0){
                 if(ob.transform.GetChild(0).tag == "andar"){
                     movimento.Instance.Andar();
@@ -31,13 +30,10 @@ public class execucao : MonoBehaviour{
                 }
                 else if(ob.transform.GetChild(0).tag == "R1"){
                     yield return StartCoroutine(R1execucao.Instance.R1exe());
-
                 }
                 else if(ob.transform.GetChild(0).tag == "R2"){
                     yield return StartCoroutine(R2execucao.Instance.R2exe());
-            
                 }
-
                 else if(ob.transform.GetChild(0).tag == "R3"){
                     yield return StartCoroutine(R3execucao.Instance.R3exe());
                 }
@@ -51,5 +47,5 @@ public class execucao : MonoBehaviour{
 
             }
         }
-        start.play = 0;
+        Play.play = 0;
 }	}
