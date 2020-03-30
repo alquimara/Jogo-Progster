@@ -17,6 +17,10 @@ TagManager:
   - R3
   - F1
   - F2
+  - plataforma
+  - escada
+  - subir
+  - descer
   layers:
   - Default
   - TransparentFX
