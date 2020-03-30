@@ -20,7 +20,7 @@ public class R2execucao : MonoBehaviour
                 for(int i=0;i<contadorR2.Instance.contador2R2;i++){
                     if(ob.transform.GetChild(0).tag == "andar"){
                         movimento.Instance.Andar();
-                        yield return new WaitForSeconds(0.5F);
+                        yield return new WaitForSeconds(2F);
                     }
                     if(ob.transform.GetChild(0).tag == "pular"){
                         movimento.Instance.Pular();

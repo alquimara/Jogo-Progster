@@ -22,7 +22,7 @@ public class execucao : MonoBehaviour{
             if(ob.transform.childCount != 0){
                 if(ob.transform.GetChild(0).tag == "andar"){
                     movimento.Instance.Andar();
-                    yield return new WaitForSeconds(0.5F);
+                    yield return new WaitForSeconds(2.0F);
                 }
                 if(ob.transform.GetChild(0).tag == "pular" && movimento.grounded){
                     movimento.Instance.Pular();

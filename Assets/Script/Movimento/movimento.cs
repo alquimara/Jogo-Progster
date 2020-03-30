@@ -40,7 +40,8 @@ public  class movimento : MonoBehaviour{
 		}
 	}
 	public void Andar(){
-		transform.Translate(andar);
+		//transform.Translate(andar);
+		personagem.velocity = new Vector2(3.22f,0.5f);
 		Debug.Log(transform.position.x);
 	}
 	public void Pular(){
@@ -97,6 +98,11 @@ public  class movimento : MonoBehaviour{
 		if(Obj.gameObject.tag == "cobra"){
 			Destroy(other);	
 			SceneManager.LoadScene("game over");
+		}
+		if(Obj.gameObject.tag == "bandeira"){
+			SceneManager.LoadScene("Fase 2");
+			
+
 		}
 		
 	}	

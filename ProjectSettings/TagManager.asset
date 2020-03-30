@@ -21,6 +21,7 @@ TagManager:
   - escada
   - subir
   - descer
+  - bandeira
   layers:
   - Default
   - TransparentFX
