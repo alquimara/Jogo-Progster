@@ -4,24 +4,25 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - semente
-  - cobra
+  - chao
   - personagem
-  - andar
+  - cobra
+  - semente
+  - play
   - DragParent
-  - R1
-  - 1
-  - "ch\xE3o"
+  - andar
   - pular
+  - subir
+  - descer
+  - R1
   - R2
   - R3
   - F1
   - F2
-  - plataforma
-  - escada
-  - subir
-  - descer
   - bandeira
+  - escada
+  - plataforma
+  - bandeira_2
   layers:
   - Default
   - TransparentFX
