@@ -1,9 +1,11 @@
 Win64
 PlayerPath?
-E:/DESENVOLVIMENTO TCC2/Progster Versao 1/Progster Versao 1.exe
+E:/DESENVOLVIMENTO TCC2/Progster Versao 2/progster fase2.exe
 SceneListBegin?
+Assets/Scenes/Fase 2.unity
 Assets/Scenes/Fase 1.unity
-Assets/Scenes/game over.unity
+Assets/Scenes/Game Over.unity
+Assets/Scenes/Vitoria.unity
 SceneListEnd?
 3c08375166df118bd1801438fc36b92f Unity.TextMeshPro.dll:TMPro.TMP_SelectionCaret
 77c21079ace8d76ce6e941d3dabbfe6e Unity.TextMeshPro.dll:TMPro.TMP_Dropdown
@@ -19,8 +21,8 @@ e1bbf0ab858085e38fae6b12ebbdcd35 UnityEngine.Timeline.dll:UnityEngine.Timeline.C
 e1bbf0ab858085e38fae6b12ebbdcd35 UnityEngine.Timeline.dll:UnityEngine.Timeline.GroupTrack
 e1bbf0ab858085e38fae6b12ebbdcd35 UnityEngine.Timeline.dll:UnityEngine.Timeline.PlayableTrack
 201e3fde670b00545944bb3db215c80a UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
-afc5b93a7b192de2dcb3832fe35a5c7e Assembly-CSharp.dll:.inimigo
-2d68271d12ae905b5ce610563667a68b Assembly-CSharp.dll:.movimento
+f85bc38b11d2894d2fe1a863bba5c95a Assembly-CSharp.dll:.inimigo
+22530107afbfcfc25b351ec6f91f6bf6 Assembly-CSharp.dll:.movimento
 e7a73f5f78ba6445195ec23b74a1ce2d Unity.TextMeshPro.dll:TMPro.TMP_ScrollbarEventHandler
 cf9f5cf2c3145a37ac07f00e50e460f9 UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
 71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.UI.dll:UnityEngine.EventSystems.BaseInput
@@ -125,7 +127,7 @@ b3ab2106268377ffe25dd18ac23dca28 Unity.TextMeshPro.dll:TMPro.TMP_Asset
 a1d205b2398d93160d70b3af8893c8a0 Assembly-CSharp.dll:.contadorR2
 19f76c5d4384ab96d620897df95acc50 Assembly-CSharp.dll:.R3execucao
 71bb6a6b6c8f052f948db64c7dd3ca4f Unity.TextMeshPro.dll:TMPro.TMP_SpriteAnimator
-101c68ce8c961ed0d3da2e28aca8757b Assembly-CSharp.dll:.start
+7fe74d63d09d221baee4b7187d139c30 Assembly-CSharp.dll:.Play
 ee2fb35ea466b8a491d319450d069eb0 Assembly-CSharp.dll:.contadorR1
 4fd8bf02e3089425d3502e26c44ba31a Unity.TextMeshPro.dll:TMPro.TextContainer
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.DragHandler
