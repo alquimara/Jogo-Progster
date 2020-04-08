@@ -21,11 +21,11 @@ public class execucao : MonoBehaviour{
         foreach(var ob in obj.Where(ob => (ob != transform))){
             if(ob.transform.childCount != 0){
                 if(ob.transform.GetChild(0).tag == "andar"){
-                    movimento.Instance.Andar();
-                    yield return new WaitForSeconds(2.0F);
+                    StartCoroutine(movimento.Instance.Andando());
+                    yield return new WaitForSeconds(2F);
                 }
                 if(ob.transform.GetChild(0).tag == "pular" && movimento.grounded){
-                    movimento.Instance.Pular();
+                    StartCoroutine(movimento.Instance.Pular());
                     yield return new WaitForSeconds(2F);
                 }
                 if(ob.transform.GetChild(0).tag == "subir" && movimento.subir){

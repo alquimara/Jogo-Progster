@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+
 
 public  class movimento : MonoBehaviour{
 
@@ -14,16 +16,19 @@ public  class movimento : MonoBehaviour{
 	public Vector2 andar;
 	public static bool subir;
 	public static bool descer;
-	public BoxCollider2D plataforma1;
-	public BoxCollider2D plataforma2;
+	public BoxCollider2D plataforma;
 	[HideInInspector]
 	public bool escada = false;
-	public float velocidaEscada;
+	public float velocidaEscada = 3f;
 	[HideInInspector]
 	public bool usandoEscada = false;
 	public float exitHop =3f;
-	public bool esc;
 	BoxCollider2D colisor;
+	public float moveTime = 0.1f;
+    public float inverteMoveTime;
+	public  Vector3 end;
+	public Text vidaSemente;
+	public int semente;
 	
 
 	void Awake(){
@@ -32,16 +37,15 @@ public  class movimento : MonoBehaviour{
 
 	void Start () {
 		personagem = GetComponent<Rigidbody2D> ();
-		colisor = GetComponent<BoxCollider2D> ();
-		andar = Vector2.right* 1.45F;
+		colisor = GetComponent<BoxCollider2D> ();   
 		posicaoinicial = personagem.transform.position;
-		Debug.Log(transform.position.x);
+		vidaSemente.text = semente.ToString();
 	}
 
 	void Update () {
 
 	}
-	public void Andar(){
+	/*public void Andar(){
 		//transform.Translate(andar);
 		//personagem.velocity = new Vector2(2.9f,0.5f);
 		personagem.velocity = new Vector2(2.88f,0.5f);
@@ -51,7 +55,25 @@ public  class movimento : MonoBehaviour{
 		personagem.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
 		personagem.AddForce(andar * 2, ForceMode2D.Impulse);
 
-	}
+	}*/
+	public IEnumerator Andando(){
+        end = transform.position + new Vector3(0.93f,0f,0f);
+        float distancia = (transform.position - end).sqrMagnitude;
+        Debug.Log((transform.position - end).sqrMagnitude);
+        while(distancia > float.Epsilon){
+            transform.position = Vector3.MoveTowards(transform.position, end, 3 * Time.deltaTime);
+            Debug.Log("andando");
+            distancia = (transform.position - end).sqrMagnitude;   
+            yield return null;
+        }
+        }
+    public IEnumerator Pular(){
+        Vector3 pulo = new Vector3(0.93f,0f,0f);
+        personagem.AddForce(Vector3.up * 5, ForceMode2D.Impulse);
+        personagem.AddForce(pulo*2, ForceMode2D.Impulse);
+        Debug.Log(Vector3.up *5  + "pulando");
+        yield return null;
+    }
 
     void OnCollisionStay2D(Collision2D col){
 		if(col.gameObject.tag == "chao"){
@@ -70,6 +92,7 @@ public  class movimento : MonoBehaviour{
 	void OnTriggerStay2D(Collider2D esc){
 		if(esc.gameObject.tag == "escada"){
 			subir = true;
+			Debug.Log("coledi");
 		}
 
 	}
@@ -77,13 +100,14 @@ public  class movimento : MonoBehaviour{
 		personagem.velocity = new Vector2(personagem.velocity.x, velocidaEscada);
 		personagem.gravityScale = 0;
 		escada =true;
-		plataforma1.enabled = true;
+		plataforma.enabled = true;
+		Debug.Log("aqui");
 		
 	}
 	public void Descer(){
 		personagem.gravityScale = 1;
 		escada = false;
-		plataforma2.enabled = false;
+		plataforma.enabled = false;
 		personagem.velocity = new Vector2(personagem.velocity.x,0);
 
 
@@ -97,6 +121,8 @@ public  class movimento : MonoBehaviour{
 	void OnTriggerEnter2D (Collider2D Obj){
 		if(Obj.gameObject.tag == "semente"){
 			Destroy(Obj.gameObject);
+			semente ++;
+			vidaSemente.text = semente.ToString();
 		}
 		else if(Obj.gameObject.tag == "cobra"){
 			Destroy(Obj.gameObject);

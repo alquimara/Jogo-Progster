@@ -18,11 +18,11 @@ public class R1execucao : MonoBehaviour{
             if(ob.transform.childCount != 0){
                 for(int i=0;i<contadorR1.Instance.contador1R1;i++){
                     if(ob.transform.GetChild(0).tag == "andar"){
-                        movimento.Instance.Andar();
+                        StartCoroutine(movimento.Instance.Andando());
                         yield return new WaitForSeconds(2F);
                     }
                     if(ob.transform.GetChild(0).tag == "pular"){
-                        movimento.Instance.Pular();
+                        StartCoroutine(movimento.Instance.Pular());
                         yield return new WaitForSeconds(2F);
                     }
                     if(ob.transform.GetChild(0).tag == "subir" && movimento.subir){
