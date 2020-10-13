@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: eb21ad99bcf305d4183c2715af265285
+  - enabled: 1
+    path: Assets/Scenes/Mundos.unity
+    guid: 05c9656cf3f43224285f14521df9400b
+  - enabled: 1
+    path: Assets/Scenes/FasesMundo1.unity
+    guid: 46a081b0f9c21964bb729e078e826310
+  - enabled: 1
+    path: Assets/Scenes/Fase 1.unity
+    guid: 18106b4d901a092478aa7d7a9771ac4e
+  - enabled: 1
+    path: "Assets/Scenes/hist\xF3ria.unity"
+    guid: 91750b93227635849abc958caa1bb8a0
+  - enabled: 1
+    path: Assets/Scenes/Fase 2.unity
+    guid: 9b0ca3b92933c6c49b298c2110ffb612
+  - enabled: 1
+    path: Assets/Scenes/Fase 3.unity
+    guid: 4b3838e7ed1d55343a3308c455c0ebf9
+  - enabled: 1
+    path: Assets/Scenes/Fase 4.unity
+    guid: b2499724f92d5d04997f82ed4ca4719e
+  - enabled: 1
+    path: Assets/Scenes/Fase 5.unity
+    guid: 290b8a0f1494c904f8e21998d4fbeb5e
+  - enabled: 1
+    path: Assets/Scenes/Fase 6.unity
+    guid: a6a757b9c779a674cb4e9c458eb8a4c0
+  - enabled: 1
+    path: Assets/Scenes/Fase 7.unity
+    guid: 22dc458555096ad40974181359e62ae1
+  - enabled: 1
+    path: Assets/Scenes/Fase 8.unity
+    guid: 6435113f9430f0241946590ded5e5be7
+  - enabled: 1
+    path: Assets/Scenes/Fase 9.unity
+    guid: 5cb253f3e17723640b9dd07109cbbeb1
+  - enabled: 1
+    path: Assets/Scenes/FasesMundo2.unity
+    guid: 97cbe43de86614f44ae10b7ccc524555
+  - enabled: 1
+    path: Assets/Scenes/FasesMundo3.unity
+    guid: dad4081eb5d79084bb4adf5faea1eb11
+  - enabled: 1
+    path: Assets/Scenes/game over.unity
+    guid: 79e787db0afbbb84db677b3284aaeb3c
+  - enabled: 1
+    path: Assets/Scenes/tutorial2.unity
+    guid: e88120fb746f6f443b0fe94bd7315b62
+  - enabled: 1
+    path: Assets/Scenes/tutorial3.unity
+    guid: 4afe2f4b14b95514185ce654c1b60a63
+  - enabled: 1
+    path: Assets/Scenes/tutorial4.unity
+    guid: 655613e8b2983ec4e93d9b0b1c77e272
+  - enabled: 1
+    path: Assets/Scenes/tutorial5.unity
+    guid: 505516aade2a45c498168917d236836f
+  - enabled: 1
+    path: Assets/Scenes/tutorial6.unity
+    guid: f15391df20e209c4c9422dff2cf50f60
+  - enabled: 1
+    path: Assets/Scenes/tutorial7.unity
+    guid: ef73b05d1fbc23a40999d757462b4691
+  m_configObjects: {}

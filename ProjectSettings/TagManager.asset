@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - chao
+  - personagem
+  - cobra
+  - semente
+  - play
+  - DragParent
+  - andar
+  - pular
+  - subir
+  - descer
+  - R1
+  - R2
+  - R3
+  - F1
+  - F2
+  - bandeira
+  - escada
+  - plataforma
+  - bandeira_2
+  - quantidade_andar
+  - peca_andar
+  - peca_pular
+  - peca_subir
+  - peca_descer
+  - peca_R1
+  - peca_f1
+  - peca_f2
+  - slot
+  - Slot_R1
+  - Slot_R2
+  - Slot_R3
+  - Slot_F1
+  - Slot_F2
+  - vida
+  - vidas
+  - sementesFases
+  - fase1
+  - fase2
+  - fase3
+  - limite
+  - limitePlataforma
+  - plataformaDinamica
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
